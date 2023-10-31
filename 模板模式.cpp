@@ -17,6 +17,8 @@ public:
         Show2();
         Show3();
     }
+    virtual ~ZooShow(){}  //基类的析构函数声明为虚函数
+
 // 不希望暴露下面的接口，但希望子类可以访问；所以设置为protected；
 protected:
     virtual void Show0(){
@@ -36,10 +38,10 @@ protected:
 class ZooShowEx : public ZooShow
 {
 public:
-    virtual void Show1(){
+    virtual void Show1() override{
         cout << "subclass Show1" << endl;
     }
-    virtual void Show3(){
+    virtual void Show3() override{
         cout << "subclass Show3" << endl;
     }
 };
@@ -47,7 +49,7 @@ public:
 
 int main(int argc, char* argv[])
 {
-    ZooShow* zs = new ZooShowEx;  // 创新后的，调用基类的show(),其中一些函数被子类重写覆盖，调用的子类的show1().show3(); 
+    ZooShow* zs = new ZooShowEx;  // 创新后的，调用基类的show(),其中一些函数被子类重写覆盖，调用的子类的show1().show3();   多态指针
     zs->Show();
 
     ZooShow* zs_base = new ZooShow;  // 不希望被创新，调用基类的Show();
