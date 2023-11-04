@@ -86,6 +86,7 @@ int main(){
     ShoesFactory* LiningProducer = new LiningFactory();
     MainForm m(LiningProducer);
     m.Button_click();
+    delete LiningProducer;
 
 
     return 0;
