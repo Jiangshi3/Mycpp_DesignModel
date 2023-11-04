@@ -1,5 +1,7 @@
+
+
 [知乎文章](https://zhuanlan.zhihu.com/p/37469260)
-[lightcity](https://github.com/Light-City/CPlusPlusThings/tree/master/design_pattern/singleton)
+       [lightcity](https://github.com/Light-City/CPlusPlusThings/tree/master/design_pattern/singleton)
 
 > 单例模式（Singleton），保证一个类仅有一个实例，并提供一个访问它的全局访问点。
 单例模式的实现分为两大类，懒汉模式和饿汉模式。懒汉模式的单例秉承着实例能晚一点构造就晚一点构造的思想，直到第一次使用单例时才构造单例；饿汉模式则恰好相反，即使实例永远不会被使用，实例的构造还是会早早的发生。
