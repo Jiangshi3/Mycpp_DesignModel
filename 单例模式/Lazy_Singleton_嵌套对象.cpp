@@ -32,7 +32,8 @@ public:
 
 // init static member
 Singleton* Singleton::instance = nullptr;
-Singleton::Deletor deletor;
+Singleton::Deletor deletor;   
+//也可以不用考虑单例的释放，因为new的是堆中的内存，在程序结束后会自动释放；并且单例自始至终只有一份，也不会占用太多内存。
 
 
 
